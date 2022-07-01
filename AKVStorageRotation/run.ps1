@@ -55,6 +55,7 @@ function RoatateSecret($keyVaultName,$secretName){
 
     #Regenerate alternate access key in provider
     $newAccessKeyValue = (RegenerateKey $alternateCredentialId $providerAddress)[-1]
+    Write-Host "Regenerated Key: $newAccessKeyValue"
     Write-Host "Access key regenerated. Access Key Id: $alternateCredentialId Resource Id: $providerAddress"
 
     #Add new access key to Key Vault
